@@ -259,7 +259,7 @@ function ConvertVolumeToImperial(quantity, currentType, expectedType) {
         switch (currentType) {
             case "Milliliter":
                 volume = Volume.fromMilliliter(quantity);
-                return console.log(quantity + " Milliliter (ml) is " + volume.gallon + " Gallon (gal))");
+                return console.log(quantity + " Milliliter (ml) is " + volume.gallon + " Gallon (gal)");
             case "Centiliter":
                 volume = Volume.fromCentiliter(quantity);
                 return console.log(quantity + " Centiliter (cl) is " + volume.gallon + " Gallon (gal)");
@@ -280,3 +280,71 @@ function ConvertVolumeToMetric(quantity, currentType, expectedType) {
 
     return console.error("Error: Unknown measurement type");
 };
+
+// ---- TEST START ----
+
+//const mass = Mass.fromKilogram(1);
+// console.log("1 kilogram to ounces: " + mass.ounce);
+// console.log("1 kilogram to pounds: " + mass.pound);
+// console.log("1 kilogram to grams: " + mass.gram);
+//
+// ConvertToMassImperial Test --
+//                                |
+//                                V
+ConvertMassToImperial(28.35, "Gram", "Ounce");
+ConvertMassToImperial(28.35, "Decagram", "Ounce");
+ConvertMassToImperial(28.35, "Kilogram", "Ounce");
+ConvertMassToImperial(1, "Gram", "Pound");
+ConvertMassToImperial(1, "Decagram", "Pound");
+ConvertMassToImperial(1, "Kilogram", "Pound");
+//
+// ConvertToMassMetric Test --
+//                                |
+//                                V
+ConvertMassToMetric(1, "Ounce", "Gram");
+ConvertMassToMetric(1, "Pound", "Gram");
+ConvertMassToMetric(1, "Ounce", "Decagram");
+ConvertMassToMetric(1, "Pound", "Decagram");
+ConvertMassToMetric(1, "Ounce", "Kilogram");
+ConvertMassToMetric(1, "Pound", "Kilogram");
+//
+// ConvertToVolumeImperial Test --
+//                                |
+//                                V
+// Teaspoon
+ConvertVolumeToImperial(1, "Milliliter", "Teaspoon");
+ConvertVolumeToImperial(1, "Deciliter", "Teaspoon");
+ConvertVolumeToImperial(1, "Centiliter", "Teaspoon");
+ConvertVolumeToImperial(1, "Liter", "Teaspoon");
+// Tablespoon
+ConvertVolumeToImperial(1, "Milliliter", "Tablespoon");
+ConvertVolumeToImperial(1, "Deciliter", "Tablespoon");
+ConvertVolumeToImperial(1, "Centiliter", "Tablespoon");
+ConvertVolumeToImperial(1, "Liter", "Tablespoon");
+// Fluid ounce
+ConvertVolumeToImperial(1, "Milliliter", "Fluid ounce");
+ConvertVolumeToImperial(1, "Deciliter", "Fluid ounce");
+ConvertVolumeToImperial(1, "Centiliter", "Fluid ounce");
+ConvertVolumeToImperial(1, "Liter", "Fluid ounce");
+// Cup
+ConvertVolumeToImperial(1, "Milliliter", "Cup");
+ConvertVolumeToImperial(1, "Deciliter", "Cup");
+ConvertVolumeToImperial(1, "Centiliter", "Cup");
+ConvertVolumeToImperial(1, "Liter", "Cup");
+// Pint
+ConvertVolumeToImperial(1, "Milliliter", "Pint");
+ConvertVolumeToImperial(1, "Deciliter", "Pint");
+ConvertVolumeToImperial(1, "Centiliter", "Pint");
+ConvertVolumeToImperial(1, "Liter", "Pint");
+// Quart
+ConvertVolumeToImperial(1, "Milliliter", "Quart");
+ConvertVolumeToImperial(1, "Deciliter", "Quart");
+ConvertVolumeToImperial(1, "Centiliter", "Quart");
+ConvertVolumeToImperial(1, "Liter", "Quart");
+// Gallon
+ConvertVolumeToImperial(1, "Milliliter", "Gallon");
+ConvertVolumeToImperial(1, "Deciliter", "Gallon");
+ConvertVolumeToImperial(1, "Centiliter", "Gallon");
+ConvertVolumeToImperial(1, "Liter", "Gallon");
+//
+// ---- TEST END ----
