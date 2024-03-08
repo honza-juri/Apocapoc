@@ -1,8 +1,14 @@
 import MainPageComp from "../components/MainPageComp";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const MainPage = () => {
     return (
-        <MainPageComp />
+        <div>
+            <Navbar />
+            <MainPageComp />
+            <Footer />
+        </div>
     );
 };
 
