@@ -277,6 +277,107 @@ function ConvertVolumeToImperial(quantity, currentType, expectedType) {
 
 //Converts the Imperial volume system into the Metric volume system
 function ConvertVolumeToMetric(quantity, currentType, expectedType) {
+    if (expectedType === "Milliliter") {
+        //Checking the currently used measurement type
+        switch (currentType) {
+            case "Teaspoon":
+                volume = Volume.fromTeaspoon(quantity);
+                return console.log(quantity + " Teaspoon (ts) is " + volume.milliliter + " Milliliter (ml)");
+            case "Tablespoon":
+                volume = Volume.fromTablespoon(quantity);
+                return console.log(quantity + " Tablespoon (tbsp) is " + volume.milliliter + " Milliliter (ml)");
+            case "Fluid ounce":
+                volume = Volume.fromFluid_ounce(quantity);
+                return console.log(quantity + " Fluid ounce (fl oz) is " + volume.milliliter + " Milliliter (ml)");
+            case "Cup":
+                volume = Volume.fromCup(quantity);
+                return console.log(quantity + " Cup (c) is " + volume.milliliter + " Milliliter (ml)");
+            case "Pint":
+                volume = Volume.fromPint(quantity);
+                return console.log(quantity + " Pint (p) is " + volume.milliliter + " Milliliter (ml)");
+            case "Quart":
+                volume = Volume.fromQuart(quantity);
+                return console.log(quantity + " Quart (qt) is " + volume.milliliter + " Milliliter (ml)");
+            case "Gallon":
+                volume = Volume.fromGallon(quantity);
+                return console.log(quantity + " Gallon (gal) is " + volume.milliliter + " Milliliter (ml)");
+        }
+    }
+    else if (expectedType === "Centiliter") {
+        switch (currentType) {
+            case "Teaspoon":
+                volume = Volume.fromTeaspoon(quantity);
+                return console.log(quantity + " Teaspoon (ts) is " + volume.centiliter + " Centiliter (cl)");
+            case "Tablespoon":
+                volume = Volume.fromTablespoon(quantity);
+                return console.log(quantity + " Tablespoon (tbsp) is " + volume.centiliter + " Centiliter (cl)");
+            case "Fluid ounce":
+                volume = Volume.fromFluid_ounce(quantity);
+                return console.log(quantity + " Fluid ounce (fl oz) is " + volume.centiliter + " Centiliter (cl)");
+            case "Cup":
+                volume = Volume.fromCup(quantity);
+                return console.log(quantity + " Cup (c) is " + volume.centiliter + " Centiliter (cl)");
+            case "Pint":
+                volume = Volume.fromPint(quantity);
+                return console.log(quantity + " Pint (p) is " + volume.centiliter + " Centiliter (cl)");
+            case "Quart":
+                volume = Volume.fromQuart(quantity);
+                return console.log(quantity + " Quart (qt) is " + volume.centiliter + " Centiliter (cl)");
+            case "Gallon":
+                volume = Volume.fromGallon(quantity);
+                return console.log(quantity + " Gallon (gal) is " + volume.centiliter + " Centiliter (cl)");
+        }
+    }
+    else if (expectedType === "Deciliter") {
+        switch (currentType) {
+            case "Teaspoon":
+                volume = Volume.fromTeaspoon(quantity);
+                return console.log(quantity + " Teaspoon (ts) is " + volume.deciliter + " Deciliter (dl)");
+            case "Tablespoon":
+                volume = Volume.fromTablespoon(quantity);
+                return console.log(quantity + " Tablespoon (tbsp) is " + volume.deciliter + " Deciliter (dl)");
+            case "Fluid ounce":
+                volume = Volume.fromFluid_ounce(quantity);
+                return console.log(quantity + " Fluid ounce (fl oz) is " + volume.deciliter + " Deciliter (dl)");
+            case "Cup":
+                volume = Volume.fromCup(quantity);
+                return console.log(quantity + " Cup (c) is " + volume.deciliter + " Deciliter (dl)");
+            case "Pint":
+                volume = Volume.fromPint(quantity);
+                return console.log(quantity + " Pint (p) is " + volume.deciliter + " Deciliter (dl)");
+            case "Quart":
+                volume = Volume.fromQuart(quantity);
+                return console.log(quantity + " Quart (qt) is " + volume.deciliter + " Deciliter (dl)");
+            case "Gallon":
+                volume = Volume.fromGallon(quantity);
+                return console.log(quantity + " Gallon (gal) is " + volume.deciliter + " Deciliter (dl)");
+        }
+    }
+    else if (expectedType === "Liter") {
+        switch (currentType) {
+            case "Teaspoon":
+                volume = Volume.fromTeaspoon(quantity);
+                return console.log(quantity + " Teaspoon (ts) is " + volume.liter + " Liter (l)");
+            case "Tablespoon":
+                volume = Volume.fromTablespoon(quantity);
+                return console.log(quantity + " Tablespoon (tbsp) is " + volume.liter + " Liter (l)");
+            case "Fluid ounce":
+                volume = Volume.fromFluid_ounce(quantity);
+                return console.log(quantity + " Fluid ounce (fl oz) is " + volume.liter + " Liter (l)");
+            case "Cup":
+                volume = Volume.fromCup(quantity);
+                return console.log(quantity + " Cup (c) is " + volume.liter + " Liter (l)");
+            case "Pint":
+                volume = Volume.fromPint(quantity);
+                return console.log(quantity + " Pint (p) is " + volume.liter + " Liter (l)");
+            case "Quart":
+                volume = Volume.fromQuart(quantity);
+                return console.log(quantity + " Quart (qt) is " + volume.liter + " Liter (l)");
+            case "Gallon":
+                volume = Volume.fromGallon(quantity);
+                return console.log(quantity + " Gallon (gal) is " + volume.liter + " Liter (l)");
+        }
+    }
 
     return console.error("Error: Unknown measurement type");
 };
@@ -346,5 +447,41 @@ ConvertVolumeToImperial(1, "Milliliter", "Gallon");
 ConvertVolumeToImperial(1, "Deciliter", "Gallon");
 ConvertVolumeToImperial(1, "Centiliter", "Gallon");
 ConvertVolumeToImperial(1, "Liter", "Gallon");
+//
+// ConvertToVolumeMetric Test --
+//                                |
+//                                V
+// Milliliter
+ConvertVolumeToMetric(1, "Teaspoon", "Milliliter");
+ConvertVolumeToMetric(1, "Tablespoon", "Milliliter");
+ConvertVolumeToMetric(1, "Fluid ounce", "Milliliter");
+ConvertVolumeToMetric(1, "Cup", "Milliliter");
+ConvertVolumeToMetric(1, "Pint", "Milliliter");
+ConvertVolumeToMetric(1, "Quart", "Milliliter");
+ConvertVolumeToMetric(1, "Gallon", "Milliliter");
+// Centiliter
+ConvertVolumeToMetric(1, "Teaspoon", "Centiliter");
+ConvertVolumeToMetric(1, "Tablespoon", "Centiliter");
+ConvertVolumeToMetric(1, "Fluid ounce", "Centiliter");
+ConvertVolumeToMetric(1, "Cup", "Centiliter");
+ConvertVolumeToMetric(1, "Pint", "Centiliter");
+ConvertVolumeToMetric(1, "Quart", "Centiliter");
+ConvertVolumeToMetric(1, "Gallon", "Centiliter");
+// Deciliter
+ConvertVolumeToMetric(1, "Teaspoon", "Deciliter");
+ConvertVolumeToMetric(1, "Tablespoon", "Deciliter");
+ConvertVolumeToMetric(1, "Fluid ounce", "Deciliter");
+ConvertVolumeToMetric(1, "Cup", "Deciliter");
+ConvertVolumeToMetric(1, "Pint", "Deciliter");
+ConvertVolumeToMetric(1, "Quart", "Deciliter");
+ConvertVolumeToMetric(1, "Gallon", "Deciliter");
+// Liter
+ConvertVolumeToMetric(1, "Teaspoon", "Liter");
+ConvertVolumeToMetric(1, "Tablespoon", "Liter");
+ConvertVolumeToMetric(1, "Fluid ounce", "Liter");
+ConvertVolumeToMetric(1, "Cup", "Liter");
+ConvertVolumeToMetric(1, "Pint", "Liter");
+ConvertVolumeToMetric(1, "Quart", "Liter");
+ConvertVolumeToMetric(1, "Gallon", "Liter");
 //
 // ---- TEST END ----
