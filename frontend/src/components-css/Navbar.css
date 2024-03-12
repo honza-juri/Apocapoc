@@ -8,61 +8,133 @@
     width: 100%;
     margin-bottom: 0;
     height: fit-content;
+    display: flex;
+    justify-content: space-between; /* To space items on the left and right */
+    align-items: center;
+    padding: 10px 20px; /* Adjust padding as needed */
 }
 
-.navbar-container ul {
+.navbar-items-left {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    height: fit-content;
+    display: flex;
+    align-items: center;
 }
 
-.navbar-container ul li {
-    display: inline;
-    margin: auto;
-    margin-right: 3%;
-    font-size: 18px;
+.navbar-items-left li {
+    margin-right: 20px;
 }
 
-.navbar-container ul li a {
+.navbar-items-left li:last-child {
+    margin-right: 0; /* Remove margin for last item */
+}
+
+.navbar-items-left li a {
     color: #FFDACA; /* Navbar link color */
     text-decoration: none;
-    padding-left: 1%;
-    
+}
+
+.navbar-items-right {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-items-right li {
+    margin-left: 20px;
+}
+
+.navbar-items-right li:first-child {
+    margin-left: 0; /* Remove margin for first item */
+}
+
+.navbar-items-right li a {
+    color: #FFDACA; /* Navbar link color */
+    text-decoration: none;
 }
 
 .search-container {
-    float: right; /* Align search container to the right */
+    display: flex;
+    align-items: center;
 }
 
 .search-container input[type=text] {
-    background-color: #4A9448;
+    background-color: #629461;
     padding: 6px;
-    margin-top: 8px;
     font-size: 16px;
     color: #FFDACA;
-    border: none !important;
+    border: none;
+    outline: none;
 }
 
 .search-container button {
-    float: left; /* Align button to the left */
     padding: 6px 10px;
-    margin-top: 8px;
-    margin-right: 16px;
-    margin-bottom: 6px;
-    background: transparent; /* Set background to transparent */
+    background: transparent;
     border: none;
     cursor: pointer;
 }
 
-.search-container {
-    background-color: #3d9352; /* Set background color for search container */
-    border-left: 1px solid #FFDACA;
-    margin:auto;
+.search-container button:focus {
+    outline: none;
 }
 
-.search-container input[type=text]:focus {
-    border: none;
-    border-bottom: 1px solid #FFDACA;
-    outline: none;
+/* Dropdown Menu Styles */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position dropdown below parent */
+    left: 0;
+    background-color: #f9f9f9;
+    min-width: 200px; /* Adjust width as needed */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.navbar-container ul li:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.dropdown-content ul li {
+    padding: 10px;
+}
+
+.dropdown-content ul li a {
+    color: #000;
+    text-decoration: none;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    padding-top: 6px;
+}
+
+.social-icons a {
+    margin-right: 20px;
+    color: #FFDACA; /* Social icon color */
+    text-decoration: none; /* Remove default underline */
+}
+
+.social-icons a:hover {
+    text-decoration: none; /* Remove underline on hover */
+}
+
+.social-icons a:visited {
+    color: #FFDACA; /* Prevent visited links from turning purple */
+}
+
+.slashes {
+    color: #FFDACA;
+}
+
+img {
+    margin-top: 6px;    
 }
