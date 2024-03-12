@@ -5,7 +5,7 @@ import './App.css';
 //MainPage
 import MainPage from './pages/MainPage.js';
 import LoginPage from './pages/LoginPage.js';
-import RegistrationPage from './pages/LoginPage.js';
+import RegistrationPage from './pages/RegistrationPage.js';
 
 function App() {
   return (
