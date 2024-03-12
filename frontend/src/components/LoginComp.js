@@ -1,18 +1,21 @@
 import React from 'react';
+import "../components-css/LoginComp.css";
 
 function Login() {
     return (
-        <div className='container'>
-            <h2>Login to your account</h2>
+        <div className='login-container'>
+            <h2>Login To Your Account!</h2>
             <form>
-                <input type='text' className='form-input' placeholder='Username' required />
-                <input type='password' className='form-input' placeholder='Password' required />
-                <input type='checkbox' className='form-input' />
-                <label className='form-label'>Remember me</label>
-                <a href=''>Forgot password?</a>
+                <input type='text' id='username' className='form-input' placeholder='Username' required />
+                <input type='password' id='password' className='form-input' placeholder='Password' required />
+                <label className='checkbox-container'>
+                    <input type='checkbox' id='remember' className='form-check' />
+                    Remember me
+                </label>
+                <a href='' className='forgot-pw'>Forgot password?</a>
                 <button type='submit' className='form-button'>Login</button>
             </form>
-            <p>Not Registered yet? <a href=''>Sign up here</a></p>
+            <p>Not Registered yet? <a href='' className='sign-up'>Sign-Up</a></p>
         </div>
     );
 }
