@@ -138,3 +138,14 @@
 img {
     margin-top: 6px;    
 }
+
+.columns {
+    display: flex;
+}
+
+.column {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
