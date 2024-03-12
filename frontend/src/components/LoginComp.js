@@ -15,7 +15,7 @@ function Login() {
                 <a href='' className='forgot-pw'>Forgot password?</a>
                 <button type='submit' className='form-button'>Login</button>
             </form>
-            <p className='notregistered'>Not Registered yet? <a href='' className='sign-up'>Sign-Up</a></p>
+            <p className='notregistered'>Not Registered yet? <a href='/registration' className='sign-up'>Sign-Up</a></p>
         </div>
     );
 }

@@ -6,6 +6,7 @@ import './App.css';
 import MainPage from './pages/MainPage.js';
 import LoginPage from './pages/LoginPage.js';
 import RegistrationPage from './pages/RegistrationPage.js';
+import ProfilePage from './pages/ProfilePage.js';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path='/' element={<MainPage />}></Route>
         <Route path='/login' element={<LoginPage />}></Route>
         <Route path='/registration' element={<RegistrationPage />}></Route>
+        <Route path='/profile' element={<ProfilePage />}></Route>
       </Routes>
     </Router>
   );
