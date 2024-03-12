@@ -1,0 +1,86 @@
+body {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.registration-container {
+    width: 90%;
+    max-width: 50rem;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 20px;
+    position: relative;
+}
+
+.form-input {
+    display: flex;
+    margin-top: 5px;
+}
+
+.form-label {
+    margin-top: 5px;
+}
+
+.message-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.message {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.message.error {
+    background-color: #f44336;
+}
+
+.message.success {
+    background-color: #4CAF50;
+}
+
+.message.show {
+    opacity: 1;
+    animation: floatMessage 3.5s ease forwards;
+}
+
+@keyframes floatMessage {
+    0% {
+        transform: translateY(0);
+    }
+
+    10% {
+        transform: translateY(-10px);
+    }
+
+    90% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .registration-container {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .registration-container {
+        width: 90%;
+    }
+}
