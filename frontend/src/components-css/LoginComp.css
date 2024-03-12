@@ -41,10 +41,6 @@ h2 {
     text-align: center;
 }
 
-.forgot-pw {
-
-}
-
 .form-button {
     display: flex;
     border: 1px solid;
@@ -57,4 +53,8 @@ h2 {
 .form-button:hover {
     background-color: #2d692c;
     color:white;
+}
+
+.notregistered {
+    text-align: center;
 }
