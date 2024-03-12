@@ -67,18 +67,16 @@ const RegistrationComp = () => {
         <div className='registration-container'>
             <h2>Registration Form</h2>
             <form onSubmit={handleSubmit}>
-                <label className='form-label' htmlFor="username">Username:</label>
-                <input className='form-input' type="text" id="username" name="username" value={formData.username} onChange={handleChange} />
+                <input className='form-input' type="text" id="username" name="username" placeholder='Username' value={formData.username} onChange={handleChange} />
 
-                <label className='form-label' htmlFor="email">Email:</label>
-                <input className='form-input' type="email" id="email" name="email" value={formData.email} onChange={handleChange} />
+                <input className='form-input' type="email" id="email" name="email" placeholder='Email' value={formData.email} onChange={handleChange} />
 
-                <label className='form-label' htmlFor="password">Password:</label>
-                <input className='form-input' type="password" id="password" name="password" value={formData.password} onChange={handleChange} />
+                <input className='form-input' type="password" id="password" name="password" placeholder='Password' value={formData.password} onChange={handleChange} />
 
-                <label className='form-label' htmlFor="confirmPassword">Confirm Password:</label>
-                <input className='form-input' type="password" id="confirmPassword" name="confirmPassword" value={formData.confirmPassword} onChange={handleChange} />
-                <button type="submit">Register</button>
+                <input className='form-input' type="password" id="confirmPassword" name="confirmPassword" placeholder='Confirm Password' value={formData.confirmPassword} onChange={handleChange} />
+                
+                <button className='form-button' type="submit">Register</button>
+                <p className='has-an-account'>Already has an account? <a href='/login' className='log-in'>Login</a></p>
             </form>
             {message && (
                 <div className={`message-container`}>
