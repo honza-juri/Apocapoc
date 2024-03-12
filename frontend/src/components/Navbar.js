@@ -106,7 +106,7 @@ function Navbar() {
                 </ul>
                 <ul className="navbar-items-right">
                     <li><a href="/login">Login</a></li>
-                    <li><a href="/signup">Signup</a></li>
+                    <li><a href="/registration">Signup</a></li>
                     <li>
                         <div className="search-container">
                             <button type="submit">

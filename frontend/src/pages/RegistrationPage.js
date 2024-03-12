@@ -1,4 +1,4 @@
-import RegistrationComp from "../components/RegistrationComp";
+import RegistrationComp from "../components/RegistrationComp.js";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
