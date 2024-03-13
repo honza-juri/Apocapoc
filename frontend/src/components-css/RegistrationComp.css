@@ -7,11 +7,12 @@ body {
 }
 
 .registration-container {
-    width: 90%;
-    max-width: 50rem;
-    border: 1px solid black;
-    border-radius: 8px;
-    padding: 20px;
+    border: 1px black solid;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: fit-content;
+    max-height: fit-content;
+    margin: 0 auto;
     position: relative;
 }
 
@@ -52,6 +53,34 @@ body {
 .message.show {
     opacity: 1;
     animation: floatMessage 3.5s ease forwards;
+}
+
+
+.log-in, .log-in:hover, .log-in:visited, .log-in:active, .log-in:link {
+    color: #629461;
+    text-decoration: none;
+}
+
+h2 {
+    text-align: center;
+}
+
+.form-button {
+    display: flex;
+    border: 1px solid;
+    border-color: #2d692c;
+    background-color: #629461;
+    color: white;
+    padding: 5px 20px;
+}
+
+.form-button:hover {
+    background-color: #2d692c;
+    color:white;
+}
+
+.has-an-account {
+    text-align: center;
 }
 
 @keyframes floatMessage {

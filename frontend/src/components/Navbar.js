@@ -1,15 +1,11 @@
 import React from 'react';
 import "../components-css/Navbar.css";
-
-// SVG icon for search
-const SearchIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#FFDACA" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2">
-        <circle cx="11" cy="11" r="8" />
-        <line x1="25" x2="16.65" y1="25" y2="17" />
-    </svg>
-);
+import LoginAndSignup from "./LoginAndSignupComp.js";
+import Profile from "./ProfileComp.js";
 
 function Navbar() {
+    const isLoggedIn = true;
+
     return (
         <nav>
             <div className="navbar-container">
@@ -39,7 +35,7 @@ function Navbar() {
                                 <div className="column">
                                     <h3>SNACKS</h3>
                                     <ul>
-                                    <li><a href="/recipes/category2">Placeholder 1</a></li>
+                                        <li><a href="/recipes/category2">Placeholder 1</a></li>
                                         <li><a href="/recipes/category2">Placeholder 2</a></li>
                                         <li><a href="/recipes/category2">Placeholder 3</a></li>
                                     </ul>
@@ -47,7 +43,7 @@ function Navbar() {
                                 <div className="column">
                                     <h3>DINNERS</h3>
                                     <ul>
-                                    <li><a href="/recipes/category2">Placeholder 1</a></li>
+                                        <li><a href="/recipes/category2">Placeholder 1</a></li>
                                         <li><a href="/recipes/category2">Placeholder 2</a></li>
                                         <li><a href="/recipes/category2">Placeholder 3</a></li>
                                     </ul>
@@ -55,7 +51,7 @@ function Navbar() {
                                 <div className="column">
                                     <h3>DESSERTS</h3>
                                     <ul>
-                                    <li><a href="/recipes/category2">Placeholder 1</a></li>
+                                        <li><a href="/recipes/category2">Placeholder 1</a></li>
                                         <li><a href="/recipes/category2">Placeholder 2</a></li>
                                         <li><a href="/recipes/category2">Placeholder 3</a></li>
                                     </ul>
@@ -63,7 +59,7 @@ function Navbar() {
                                 <div className="column">
                                     <h3>SIDES</h3>
                                     <ul>
-                                    <li><a href="/recipes/category2">Placeholder 1</a></li>
+                                        <li><a href="/recipes/category2">Placeholder 1</a></li>
                                         <li><a href="/recipes/category2">Placeholder 2</a></li>
                                         <li><a href="/recipes/category2">Placeholder 3</a></li>
                                     </ul>
@@ -71,7 +67,7 @@ function Navbar() {
                                 <div className="column">
                                     <h3>DRINKS</h3>
                                     <ul>
-                                    <li><a href="/recipes/category2">Placeholder 1</a></li>
+                                        <li><a href="/recipes/category2">Placeholder 1</a></li>
                                         <li><a href="/recipes/category2">Placeholder 2</a></li>
                                         <li><a href="/recipes/category2">Placeholder 3</a></li>
                                     </ul>
@@ -81,7 +77,7 @@ function Navbar() {
                     </li>
                     <li className='slashes'>/ /</li>
                     <li className='social-icons'>
-                        
+
                         {/* Facebook */}
                         <a href="https://www.facebook.com">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" className="main-grid-item-icon" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2">
@@ -104,18 +100,7 @@ function Navbar() {
                         </a>
                     </li>
                 </ul>
-                <ul className="navbar-items-right">
-                    <li><a href="/login">Login</a></li>
-                    <li><a href="/registration">Signup</a></li>
-                    <li>
-                        <div className="search-container">
-                            <button type="submit">
-                                <SearchIcon />
-                            </button>
-                            <input type="text" placeholder="search..." name="search" />
-                        </div>
-                    </li>
-                </ul>
+                {isLoggedIn ? <Profile /> : <LoginAndSignup />}
             </div>
         </nav>
     );
