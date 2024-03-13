@@ -15,7 +15,6 @@ const MainPageComp = () => {
                     </div>
                     <div className="textbox">
                         <h2>About</h2>
-                        test123
                     </div>
                 </a>
             </div>
