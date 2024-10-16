@@ -1,0 +1,115 @@
+body {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.registration-container {
+    border: 1px black solid;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: fit-content;
+    max-height: fit-content;
+    margin: 0 auto;
+    position: relative;
+}
+
+.form-input {
+    display: flex;
+    margin-top: 5px;
+}
+
+.form-label {
+    margin-top: 5px;
+}
+
+.message-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.message {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.message.error {
+    background-color: #f44336;
+}
+
+.message.success {
+    background-color: #4CAF50;
+}
+
+.message.show {
+    opacity: 1;
+    animation: floatMessage 3.5s ease forwards;
+}
+
+
+.log-in, .log-in:hover, .log-in:visited, .log-in:active, .log-in:link {
+    color: #629461;
+    text-decoration: none;
+}
+
+h2 {
+    text-align: center;
+}
+
+.form-button {
+    display: flex;
+    border: 1px solid;
+    border-color: #2d692c;
+    background-color: #629461;
+    color: white;
+    padding: 5px 20px;
+}
+
+.form-button:hover {
+    background-color: #2d692c;
+    color:white;
+}
+
+.has-an-account {
+    text-align: center;
+}
+
+@keyframes floatMessage {
+    0% {
+        transform: translateY(0);
+    }
+
+    10% {
+        transform: translateY(-10px);
+    }
+
+    90% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .registration-container {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .registration-container {
+        width: 90%;
+    }
+}

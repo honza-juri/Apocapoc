@@ -1,0 +1,10 @@
+.menubox{
+    display: inline-block;
+    margin: 40px;
+    border: solid black 1px;
+}
+
+.menubox a{
+    text-decoration: none;
+    color: black;
+}

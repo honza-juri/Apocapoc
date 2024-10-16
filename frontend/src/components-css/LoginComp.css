@@ -1,0 +1,60 @@
+body {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100vh;
+}
+
+.login-container {
+    border: 1px black solid;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: fit-content;
+    max-height: fit-content;
+    margin: 0 auto;
+    position: relative;
+}
+
+.form-input {
+    padding: 5px;
+    border: 1.5px solid;
+    border-color: rgb(178, 173, 173);
+    border-radius: 5px;
+    display: flex;
+    margin: 5px;
+    width: 20em; 
+}
+
+.forgot-pw, .forgot-pw:hover, .forgot-pw:visited, .forgot-pw:active, .forgot-pw:link {
+    display: flex;
+    justify-content: right;
+    color: #629461;
+    text-decoration: none;
+}
+
+.sign-up, .sign-up:hover, .sign-up:visited, .sign-up:active, .sign-up:link {
+    color: #629461;
+    text-decoration: none;
+}
+
+h2 {
+    text-align: center;
+}
+
+.form-button {
+    display: flex;
+    border: 1px solid;
+    border-color: #2d692c;
+    background-color: #629461;
+    color: white;
+    padding: 5px 20px;
+}
+
+.form-button:hover {
+    background-color: #2d692c;
+    color:white;
+}
+
+.notregistered {
+    text-align: center;
+}
